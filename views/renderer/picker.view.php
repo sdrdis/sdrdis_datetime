@@ -11,13 +11,15 @@
                     var $input = $('input#<?= $id ?>');
 
                     var $enabled = $('input#<?= $id ?>__enabled');
-                    if ($input.val() != '') {
-                        $enabled.attr('checked', 'checked');
-                        $enabled.wijcheckbox('refresh');
+                    if ($enabled.length > 0) {
+                        if ($input.val() != '') {
+                            $enabled.attr('checked', 'checked');
+                            $enabled.wijcheckbox('refresh');
+                        }
+                        $enabled.change(function() {
+                            updateDateTime();
+                        });
                     }
-                    $enabled.change(function() {
-                        updateDateTime();
-                    });
 
                     var $date = $('input#<?= $id ?>__date');
                     $.datepicker.setDefaults($.datepicker.regional[$.nosLang.substr(0, 2)]);
@@ -39,7 +41,7 @@
                     updateDateTime();
 
                     function updateDateTime() {
-                        if ($enabled.is(':checked')) {
+                        if ($enabled.length == 0 || $enabled.is(':checked')) {
                             $time.parent().show();
                             $date.parent().show();
                             var value = $date.val();
