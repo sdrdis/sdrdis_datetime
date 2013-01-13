@@ -14,7 +14,7 @@ return array(
     'provider' => array(
         'name' => 'Sdrdis',
     ),
-    'namespace' => 'Sdrdis\Datetime\Renderer_Picker',
+    'namespace' => 'Sdrdis\Datetime',
     'permission' => array(
     ),
     'icons' => array(
