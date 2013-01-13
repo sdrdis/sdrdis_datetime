@@ -1,0 +1,1 @@
+<span style="display: none;"><input type="text" id="<?= $id ?>__time" size="5" class="timepicker" data-timepicker-options="<?= htmlspecialchars(\Format::forge()->to_json($timepicker_options)) ?>" /></span>
