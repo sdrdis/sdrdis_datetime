@@ -4,7 +4,7 @@
                 'jquery-nos',
                 'jquery-ui.datepicker.i18n',
                 'jquery-ui.datetimepicker.i18n',
-                'jquery-ui.wijcheckbox.i18n'
+                'wijmo.wijcheckbox'
             ],
             function($) {
                 $(function() {
